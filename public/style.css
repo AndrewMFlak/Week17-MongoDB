@@ -1,5 +1,23 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
 body {
-    background-color: gray;
+    background-image: url("waves.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contentContainer {
+    background-color: lightgray;
+    border: 2px solid gray;
+    color: black;
+}
+
+.divFormat {
+    border: 1px solid black;
+    background-color: white;
 }
 
 #wrapper {

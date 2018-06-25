@@ -7,9 +7,13 @@ var Schema = mongoose.Schema;
 
 var NoteSchema = new Schema({
     // title is string type
-    title: String,
-    // body is string type
-    body: String
+    title: {
+        type: String
+    },
+    body: {
+        // body is string type
+        body: String
+    }
 });
 
 // this creates our model from the above schema, using mongooses model method

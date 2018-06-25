@@ -5,6 +5,10 @@ var Schema = mongoose.Schema;
 
 // using the schema constructor, create a new UserSchema object
 var ArticleSchema = new Schema({
+    // image: {
+    //     type: String,
+    //     required: true
+    // },
     title: {
         // title is string value that is required
         type: String,
