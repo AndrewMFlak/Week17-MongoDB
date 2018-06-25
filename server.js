@@ -122,7 +122,5 @@ app.post("/articles/:id", function (req, res) {
 
 // start server
 app.listen(PORT, function () {
-    console.log("http://localhost:3000");
-    console.log("http://localhost:3000/articles");
-    console.log("http://localhost:3000/scrape");
+    console.log("https://murmuring-lake-54090.herokuapp.com");
 });
