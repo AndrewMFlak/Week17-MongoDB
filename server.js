@@ -27,7 +27,7 @@ app.use(express.static("public"));
 // connect to mongoDB to scraper
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = "mongodb://mongodbWeek17:password@ds117691.mlab.com:17691/heroku_dj90wvdp" || "mongodb://localhost/mongoScraper";
+var MONGODB_URI = "mongodb://<mongodbWeek17>:<password123>@ds117691.mlab.com:17691/heroku_dj90wvdp" || "mongodb://localhost/mongoScraper";
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
@@ -130,5 +130,6 @@ app.post("/articles/:id", function (req, res) {
 // start server
 app.listen(PORT, function () {
     console.log("App running on PORT " + PORT);
+    console.log("https://murmuring-lake-54090.herokuapp.com/");
     console.log("http://localhost:3000/");
 });
