@@ -3,14 +3,74 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+.row-1 {height: 8.33%;}
+.row-2 {height: 16.66%;}
+.row-3 {height: 25%;}
+.row-4 {height: 33.33%;}
+.row-5 {height: 41.66%;}
+.row-6 {height: 58.33%;}
+.row-7 {height: 66.66%;}
+.row-8 {height: 75%;}
+.row-9 {height: 83.33%}
+.row-10 {height: 91.66%}
+.row-11 {height: 100%}
+
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+    /* border: 1px solid red; */
+
 body {
     background-image: url("waves.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+#nameHeader {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
+    background-blend-mode: multiply,multiply;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid silver;
+    color: white;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
+#links {
+    clear: both;
+    overflow: auto;
+    display: grid;
+    font-weight: bold;
+    grid-column: 4 / span 8;
+    grid-row: 1 / span 1;
+}
+ul {
+    right: 0px;
+    position: absolute;
+    top: 28px;
+    list-style-type: none;
+    color: black;
+}
+li {
+    padding: 20px;
+    float: right;
+ }
 .contentContainer {
-    background-color: lightgray;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898; 
     border: 2px solid gray;
     color: black;
 }
@@ -19,7 +79,9 @@ body {
     border: 1px solid black;
     background-color: white;
 }
-
+.H2 {
+    text-align: left;
+}
 #wrapper {
     width: 960px;
     margin-left: auto;
