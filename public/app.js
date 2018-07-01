@@ -4,7 +4,7 @@ $(".scrape").click(function () {
             $("#articles").append("<div data-id='" + data[i]._id + "'>")
             $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + "</p>");
             var LINK = data[i].link;
-            $("#articles").append("<a href url='" + data[i].link + "' data-id='" + data[i]._id + "'><br />" + LINK + "</a>" +
+            $("#articles").append("<a href='" + data[i].link + "' data-id='" + data[i]._id + "'><br />" + data[i].link + "</a>" +
                 "<br><button data-id='" + data[i]._id + "' class='addNote'>Add Note</button><button  data-id='" + data[i]._id + "' class='updateNote'>Update Note</button><button data-id='" + data[i]._id + "'class='deleteNote'>Delete Note</button></div><br>")
         }
     });
