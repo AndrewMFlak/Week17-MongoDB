@@ -3,8 +3,9 @@ $(".scrape").click(function () {
         for (var i = 0; i < data.length; i++) {
             $("#articles").append("<div data-id='" + data[i]._id + "'>")
             $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + "</p>");
-            $("#articles").append("<a href url='" + data[i].link + "' data-id='" + data[i]._id + "'><br />" + data[i].link + "</a>" +
-            "<br><button data-id='" + data[i]._id + "' class='addNote'>Add Note</button><button  data-id='" + data[i]._id + "' class='updateNote'>Update Note</button><button data-id='" + data[i]._id + "'class='deleteNote'>Delete Note</button></div><br>");
+            var LINK = data[i].link;
+            $("#articles").append("<a href url='" + data[i].link + "' data-id='" + data[i]._id + "'><br />" + LINK + "</a>" +
+                "<br><button data-id='" + data[i]._id + "' class='addNote'>Add Note</button><button  data-id='" + data[i]._id + "' class='updateNote'>Update Note</button><button data-id='" + data[i]._id + "'class='deleteNote'>Delete Note</button></div><br>")
         }
     });
 });
@@ -27,7 +28,7 @@ $(document).on("click", ".addNote", function () {
 
             // input to enter new title
             $("#notes").append("<input id='titleinput' name='title' placeholder='title'>");
-            
+
             // text area to add new body
             $("#notes").append("<textarea id='bodyinput' name='body' placeholder='insert note here'></textarea>");
 
@@ -44,7 +45,7 @@ $(document).on("click", ".addNote", function () {
         });
 });
 
-$(document).on("click", "#savenote", function() {
+$(document).on("click", "#savenote", function () {
     // Grab the id associated with the article from the submit button
     var thisId = $(this).attr("data-id");
 
@@ -59,16 +60,16 @@ $(document).on("click", "#savenote", function() {
             body: $("#bodyinput").val()
         }
     })
-// with that done
-.then(function(data) {
-    // long the response
-    console.log(data);
-    // empty the notes section
-    $("#notes").empty();
-});
-// Also remove the values entered in the input and text area for note entry
+        // with that done
+        .then(function (data) {
+            // long the response
+            console.log(data);
+            // empty the notes section
+            $("#notes").empty();
+        });
+    // Also remove the values entered in the input and text area for note entry
 
-$("#titleinput").val("");
-$("#bodyinput").val("");
+    $("#titleinput").val("");
+    $("#bodyinput").val("");
 
 });
